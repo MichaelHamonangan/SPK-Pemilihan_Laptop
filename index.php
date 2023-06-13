@@ -37,8 +37,8 @@
 						<div class="nav-wrapper">
 								<ul class="left" style="margin-left: -52px;">
 									<li><a class="active" href="index.php">HOME</a></li>
-									<li><a href="rekomendasi.php">REKOMENDASI</a></li>
-									<li><a href="daftar_hp.php">DAFTAR SMARTPHONE</a></li>
+									<li><a href="model.php">REKOMENDASI</a></li>
+									<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
 									<li><a href="#about">TENTANG</a></li>
 								</ul>
 						</div>
@@ -57,7 +57,7 @@
 						<h5 class="header jarak-button col s12 light" style="margin-bottom: 0px; font-size: 26px">PEMILIHAN SMARTPHONE</h5>
 					</div>
 					<div class="row center" \>
-								<a href="rekomendasi.php" id="download-button" class="waves-effect waves-light btn-large" style="margin-top: 40px">Pilih Rekomendasi</a>
+								<a href="model.php" id="download-button" class="waves-effect waves-light btn-large" style="margin-top: 40px">Pilih Rekomendasi</a>
 							</div>
 				</div>
 			</div>

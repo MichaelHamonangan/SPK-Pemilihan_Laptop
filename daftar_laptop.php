@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('koneksi.php');
+include('connection.php');
 ?>
 
 <?php 
@@ -138,8 +138,8 @@ include('koneksi.php');
 						<div class="nav-wrapper">
 								<ul class="left" style="margin-left: -52px;">
 									<li><a href="index.php">HOME</a></li>
-									<li><a href="rekomendasi.php">REKOMENDASI</a></li>
-									<li><a class="active" href="daftar_hp.php">DAFTAR SMARTPHONE</a></li>
+									<li><a href="model.php">REKOMENDASI</a></li>
+									<li><a class="active" href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
 									<li><a href="#about">TENTANG</a></li>
 								</ul>
 						</div>

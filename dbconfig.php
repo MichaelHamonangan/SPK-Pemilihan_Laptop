@@ -2,7 +2,7 @@
 $DB_HOST = '127.0.0.1';
 $DB_USER = 'root';
 $DB_PASS = '';
-$DB_NAME = 'data_hp';
+$DB_NAME = 'dblaptop_spk';
 
 try {
 	$DB_con = new PDO("mysql:host={$DB_HOST};dbname={$DB_NAME}", $DB_USER, $DB_PASS);

@@ -3,7 +3,7 @@
 $host = "127.0.0.1";
 $user = "root";
 $pass = "";
-$name = "data_laptop";
+$name = "dblaptop_spk";
 
 try {
     //create PDO connection

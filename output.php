@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include('koneksi.php');
+include('connection.php');
 
 //Bobot
 $W1	= $_POST['harga'];
@@ -86,8 +86,8 @@ function JarakIplus($aplus,$bob){
 				<div class="nav-wrapper">
 					<ul class="left" style="margin-left: -52px;">
 						<li><a href="index.php">HOME</a></li>
-						<li><a href="rekomendasi.php">REKOMENDASI</a></li>
-						<li><a href="daftar_hp.php">DAFTAR SMARTPHONE</a></li>
+						<li><a href="model.php">REKOMENDASI</a></li>
+						<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
 						<li><a class="active" href="hasil.php">PERHITUNGAN</a></li>
 						<li><a href="#about">TENTANG</a></li>
 					</ul>
@@ -497,7 +497,7 @@ function JarakIplus($aplus,$bob){
 						</li>
 					</ul>
 					<div class="row center" \>
-						<a href="rekomendasi.php" id="download-button" class="waves-effect waves-light btn" style="margin-top: 0px">Hitung Rekomendasi Ulang</a>
+						<a href="model.php" id="download-button" class="waves-effect waves-light btn" style="margin-top: 0px">Hitung Rekomendasi Ulang</a>
 					</div>
 				</div>
 			</div>
