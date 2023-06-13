@@ -42,13 +42,13 @@ include('connection.php');
 		}
 
 		if($layar < 11){
-			$harga_angka = 1;
+			$layar_angka = 1;
 		} 
 		elseif($layar >= 11 && $layar <= 14){
-			$harga_angka = 3;
+			$layar_angka = 3;
 		}
-		elseif($harga > 14){
-			$harga_angka = 5;
+		elseif($layar > 14){
+			$layar_angka = 5;
 		}
 
 		if($ram == 4){
