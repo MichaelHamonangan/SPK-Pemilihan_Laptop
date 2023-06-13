@@ -38,7 +38,7 @@
 								<ul class="left" style="margin-left: -52px;">
 									<li><a class="active" href="index.php">HOME</a></li>
 									<li><a href="model.php">REKOMENDASI</a></li>
-									<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
+									<li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
 								</ul>
 						</div>
 					
@@ -53,14 +53,14 @@
 				<div class="container">
 					<h1 class="header jarak center white-text" style="font-size: 40px">SISTEM PENDUKUNG KEPUTUSAN MENGGUNAKAN METODE TOPSIS</h1>
 					<div class="row center">
-						<h5 class="header jarak-button col s12 light" style="margin-bottom: 0px; font-size: 26px">PEMILIHAN SMARTPHONE</h5>
+						<h5 class="header jarak-button col s12 light" style="margin-bottom: 0px; font-size: 26px">PEMILIHAN LAPTOP</h5>
 					</div>
 					<div class="row center" \>
 								<a href="model.php" id="download-button" class="waves-effect waves-light btn-large" style="margin-top: 40px">Pilih Rekomendasi</a>
 							</div>
 				</div>
 			</div>
-			<div class="parallax"><img src="assets/image/pixel.jpg" alt="Laptop"></div>
+			<div class="parallax"><img style="width:100%;" src="assets/image/laptop.jpg" alt="Laptop"></div>
 		</div>
 		<!-- Jumbotron End -->
 
