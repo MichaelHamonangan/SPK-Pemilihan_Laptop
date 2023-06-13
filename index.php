@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Leppi: Sistem Pendukung Keputusan Pemilihan Laptop</title>
+	<title>LaptopSage: Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<meta property="og:image" content="assets/image/laptop2.jpg" />
-	<meta name="description" content="Leppi adalah aplikasi Sistem Pendukung Keputusan Laptop berbasis Metode Weight Product">
-  
+	
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	
 	<!--Import materialize.css-->
 	<link type="text/css" rel="stylesheet" href="assets/css/materialize.css"  media="screen,projection"/>
 	<link rel="stylesheet" href="assets/css/table.css">
@@ -32,13 +30,13 @@
 	});
 	</script>
 </head>
-<body style="background-color:#F7F7F7F">
+<body style="background-color:#161616">
 	<!-- Header Start-->
 	<div class="navbar-fixed">
 	<nav style="background-color:#F7F7F7">
     	<div class="container">
-			<div class="nav-wrapper" style="background-color:DodgerBlue;">
-				<ul class="left" style="margin-left: -52px;">
+			<div class="nav-wrapper" style="background-color:#F05335;">
+				<ul class="left" style="margin-left: 200;">
 					<li><a class="active" href="index.php">HOME</a></li>
 					<li><a href="model.php">REKOMENDASI</a></li>
 					<li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
@@ -50,7 +48,6 @@
 	<!-- Header End -->
 
     <!-- Body Start -->
-
 		<!-- Jumbotron Start -->
 		<div id="index-banner" class="parallax-container">
 			<div class="section no-pad-bot">
@@ -60,7 +57,7 @@
 						<h5 class="header jarak-button col s12 light" style="margin-bottom: 0px; font-size: 26px">Metode Topsis</h5>
 						</div>
 					<div class="row center" \>
-						<a href="model.php" id="download-button" class="waves-effect waves-light btn-large" style="margin-top: 40px">Mulai pilih Laptop mu</a>
+						<a href="model.php" id="download-button" class="btn-large" style="background-color:#F05335; color:#F7F7F7; margin-top: 40px">Mulai pilih Laptop mu</a>
 						</div>
 					</div>
 				</div>
@@ -74,7 +71,7 @@
 		    <div class="section-card" style="padding: 36px 0px">
 		    	<div class="row">
 		    		<div class="col s6">
-						<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">Tentang Aplikasi Ini</h5></center><br>
+			    		<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">Tentang Aplikasi Ini</h5></center><br>
 			    		<p style="text-align: justify; padding-right: 16px;">Program ini membantu kamu untuk memilih laptop yang cocok atau serupa
 						dengan spesifikasi laptop yang kamu butuhkan. Kamu tinggal memasukkan spesifikasi laptop seperti apa yang kamu inginkan.
 						Kami akan sesuaikan dengan budget yang kamu punya!</p>
@@ -92,6 +89,14 @@
 		</div>
 	</div>
 	<!-- Info End -->
+
+    <!-- Footer Start -->
+	<!-- <div class="footer-copyright" style="padding: 0px 0px">
+      <div class="container">
+        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
+      </div>
+    </div> -->
+    <!-- Footer End -->
 
     <script type="text/javascript">
 	 			$(document).ready(function(){
