@@ -96,16 +96,16 @@ include('connection.php');
 			$processor_angka = 1;
 		}
 		elseif($processor == "Performa Rendah"){
-			$processor_angka = 2;
-		}
-		elseif($processor == "Performa Sedang"){
 			$processor_angka = 3;
 		}
+		elseif($processor == "Performa Sedang"){
+			$processor_angka = 5;
+		}
 		elseif($processor == "Performa Tinggi"){
-			$processor_angka = 4;
+			$processor_angka = 7;
 		}
 		elseif($processor == "Performa Maximum"){
-			$processor_angka = 5;
+			$processor_angka = 9;
 		}
 		
 		$sql = "INSERT INTO `daftar_laptop` (`id`, `merk`, `seri`, `harga`, `layar`, `ram`, `jenis_memory`, `ukuran_memory`, `processor`, `harga_angka`,`layar_angka`, `ram_angka`, `jenis_memory_angka`,`ukuran_memory_angka`, `processor_angka`) 

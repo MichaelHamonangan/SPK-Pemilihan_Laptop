@@ -53,23 +53,39 @@
                                     <div class="card">
                                         <div class="card-content">
                                             <div class="row">
-                                                <center><h4>Masukan Bobot</h4></center>
+                                                <center><h4>Masukkan Kriteria Laptop</h4></center>
                                                 <br>
-                                                <form class = "col s12" method="POST" action="hasil.php">
+                                                <form class = "col s12" method="POST" action="output.php">
                                                     <div class = "row">
                                                         <div class="col s12">
 
                                                             <div class="col s6" style="margin-top: 10px;">
-                                                                <b>Kriteria Harga</b>
+                                                                <b>Rentang Harga</b>
                                                             </div>
                                                             <div class="col s6">
                                                                 <select required name="harga">
                                                                     <option value = "" disabled selected style="color: #eceff1;"><i>Kriteria Harga</i></option>
-                                                                    <option value = "5">< Rp. 1.000.000</option>
-                                                                    <option value = "4">1.000.000 - 3.000.000</option>
-                                                                    <option value = "3">3.000.000 - 4.000.000</option>
-                                                                    <option value = "2">4.000.000 - 5.000.000</option>
-                                                                    <option value = "1">> 5.000.000</option>
+                                                                    <option value = "10">> Rp. 30.000.000</option>
+                                                                    <option value = "9">30.000.000 - 20.000.000</option>
+                                                                    <option value = "7">20.000.000 - 15.000.000</option>
+                                                                    <option value = "5">15.000.000 - 10.000.000</option>
+                                                                    <option value = "4">10.000.000 - 7.000.000</option>
+                                                                    <option value = "3">7.000.000 - 4.000.000</option>
+                                                                    <option value = "2">4.000.000 - 2.000.000</option>
+                                                                    <option value = "1">< 2.000.000</option>
+                                                                </select>
+                                                            </div>
+
+
+                                                            <div class="col s6" style="margin-top: 10px;">
+                                                                <b>Ukuran Layar</b>
+                                                            </div>
+                                                            <div class="col s6">
+                                                                <select required name="layar">
+                                                                    <option value = "" disabled selected style="color: #eceff1;"><i>Kriteria Layar</i></option>
+                                                                    <option value = "5">> 14'</option>
+                                                                    <option value = "3">11' - 14</option>
+                                                                    <option value = "1">< 11'</option>
                                                                 </select>
                                                             </div>
 
@@ -79,25 +95,36 @@
                                                             <div class="col s6">
                                                                 <select required name="ram">
                                                                     <option value = "" disabled selected>Kriteria RAM</option> 
-                                                                    <option value = "1">0 - 1 Gb</option>
-                                                                    <option value = "2">2 Gb</option>
-                                                                    <option value = "3">3 Gb</option>
-                                                                    <option value = "4">4 Gb</option>
-                                                                    <option value = "5">> 5 Gb</option>
+                                                                    <option value = "5">64 Gb</option>
+                                                                    <option value = "4">32 Gb</option>
+                                                                    <option value = "3">16 Gb</option>
+                                                                    <option value = "2">8 Gb</option>
+                                                                    <option value = "1">4 Gb</option>
                                                                 </select>
                                                             </div>
 
                                                             <div class="col s6" style="margin-top: 10px;">
-                                                                <b>Memori</b>
+                                                            <b>Jenis Memori</b>
                                                             </div>
                                                             <div class="col s6">
-                                                                <select required name="memori">
-                                                                    <option value = "" disabled selected>Kriteria Penyimpanan</option>
-                                                                    <option value = "1">0 - 4 Gb</option>
-                                                                    <option value = "2">8 Gb</option>
-                                                                    <option value = "3">16 Gb</option>
-                                                                    <option value = "4">32 Gb</option>
-                                                                    <option value = "5">> 32 Gb</option>
+                                                                <select required name="jenis_memory">
+                                                                    <option value = "" disabled selected>Kriteria Jenis Memori</option> 
+                                                                    <option value = "1">SSD</option>
+                                                                    <option value = "5">HDD</option>
+                                                                </select>
+                                                            </div>
+
+                                                            <div class="col s6" style="margin-top: 10px;">
+                                                                <b>Ukuran Memori</b>
+                                                            </div>
+                                                            <div class="col s6">
+                                                                <select required name="ukuran_memory">
+                                                                    <option value = "" disabled selected>Kriteria Ukuran Memori</option>
+                                                                    <option value = "5">4096 Gb</option>
+                                                                    <option value = "4">2048 Gb</option>
+                                                                    <option value = "3">1024 Gb</option>
+                                                                    <option value = "2">512 Gb</option>
+                                                                    <option value = "1">256 Gb</option>
                                                                 </select>
                                                             </div>
 
@@ -107,21 +134,11 @@
                                                             <div class="col s6">
                                                                 <select required name="processor">
                                                                     <option value = "" disabled selected>Kriteria Processor</option>
-                                                                    <option value = "1">Dualcore</option>
-                                                                    <option value = "3">Quadcore</option>
-                                                                    <option value = "5">Octacore</option>
-                                                                </select>
-                                                            </div>
-
-                                                            <div class="col s6" style="margin-top: 10px;">
-                                                                <b>Kamera</b>
-                                                            </div>
-                                                            <div class="col s6">
-                                                                <select required name="kamera">
-                                                                    <option value = "" disabled selected>Kriteria Kamera</option>
-                                                                    <option value = "1">0 - 8 Mp</option>
-                                                                    <option value = "3">8 - 13 Mp</option>
-                                                                    <option value = "5">>13 Mp</option>
+                                                                    <option value = "9">Performa Maximum</option>
+                                                                    <option value = "7">Performa Tinggi</option>
+                                                                    <option value = "5">Performa Sedang</option>
+                                                                    <option value = "3">Performa Rendah</option>
+                                                                    <option value = "1">Performa Minimum</option>
                                                                 </select>
                                                             </div>
                                                             

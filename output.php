@@ -88,7 +88,7 @@ function JarakIplus($aplus,$bob){
 						<li><a href="index.php">HOME</a></li>
 						<li><a href="model.php">REKOMENDASI</a></li>
 						<li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
-						<li><a class="active" href="hasil.php">PERHITUNGAN</a></li>
+						<li><a class="active" href="output.php">PERHITUNGAN</a></li>
 					</ul>
 				</div>
 
