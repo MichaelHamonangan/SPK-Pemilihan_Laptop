@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Pendukung Keputusan Pemilihan Smartphone</title>
+	<title>Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -31,7 +31,7 @@
 								<ul class="left" style="margin-left: -52px;">
 									<li><a href="index.php">HOME</a></li>
 									<li><a class="active" href="model.php">REKOMENDASI</a></li>
-                                    <li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
+                                    <li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
 								</ul>
 						</div>
 					
@@ -147,7 +147,7 @@
     <!-- Footer Start -->
 	<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
       <div class="container">
-        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
+        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
       </div>
     </div>
     <!-- Footer End -->

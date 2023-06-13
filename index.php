@@ -3,7 +3,7 @@
 <head>
 	<title>Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<meta property="og:image" content="assets/image/laptop.jpg" />
-	<meta name="description" content="Leppi adalah aplikasi Sistem Pendukung Keputusan Laptop berbasis Metode Weight Product">
+	<meta name="description" content="Aplikasi berbasis Sistem Pendukung Keputusan Laptop dengan Metode Weight Product">
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -38,7 +38,7 @@
 								<ul class="left" style="margin-left: -52px;">
 									<li><a class="active" href="index.php">HOME</a></li>
 									<li><a href="model.php">REKOMENDASI</a></li>
-									<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
+									<li><a href="daftar_laptop.php">DAFTAR Laptop</a></li>
 								</ul>
 						</div>
 					
@@ -53,7 +53,7 @@
 				<div class="container">
 					<h1 class="header jarak center white-text" style="font-size: 40px">SISTEM PENDUKUNG KEPUTUSAN MENGGUNAKAN METODE TOPSIS</h1>
 					<div class="row center">
-						<h5 class="header jarak-button col s12 light" style="margin-bottom: 0px; font-size: 26px">PEMILIHAN SMARTPHONE</h5>
+						<h5 class="header jarak-button col s12 light" style="margin-bottom: 0px; font-size: 26px">PEMILIHAN Laptop</h5>
 					</div>
 					<div class="row center" \>
 								<a href="model.php" id="download-button" class="waves-effect waves-light btn-large" style="margin-top: 40px">Pilih Rekomendasi</a>
@@ -71,7 +71,7 @@
 		    	<div class="row">
 		    		<div class="col s6">
 			    		<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">INFO SISTEM</h5></center><br>
-			    		<p style="text-align: justify; padding-right: 16px;">Sistem Pendukung Keputusan Pemilihan Smartphone ini menggunakan metode TOPSIS yang dibangun menggunakan bahasa PHP. Sistem ini dibuat sebagai Tugas Akhir Mata Kuliah Sistem Pendukung Keputusan Prodi Teknik Informatika Universitas Trunojoyo. </p>
+			    		<p style="text-align: justify; padding-right: 16px;">Sistem Pendukung Keputusan Pemilihan Laptop ini menggunakan metode TOPSIS yang dibangun menggunakan bahasa PHP. </p>
 						</div>
 			    	<div class="col s6">
 			    		<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">INFO METODE</h5></center><br>
@@ -87,7 +87,7 @@
     <!-- Footer Start -->
 	<div class="footer-copyright" style="padding: 0px 0px">
       <div class="container">
-        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
+        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop 2018.</p>
       </div>
     </div>
     <!-- Footer End -->

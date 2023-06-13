@@ -57,7 +57,7 @@ function JarakIplus($aplus,$bob){
 <html>
 <head>
 	
-	<title>Sistem Pendukung Keputusan Pemilihan Smartphone</title>
+	<title>Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -87,7 +87,7 @@ function JarakIplus($aplus,$bob){
 					<ul class="left" style="margin-left: -52px;">
 						<li><a href="index.php">HOME</a></li>
 						<li><a href="model.php">REKOMENDASI</a></li>
-						<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
+						<li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
 						<li><a class="active" href="hasil.php">PERHITUNGAN</a></li>
 					</ul>
 				</div>
@@ -105,14 +105,14 @@ function JarakIplus($aplus,$bob){
 
 
 				<center>
-					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">HASIL REKOMENDASI SMARTPHONE</h4>
+					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">HASIL REKOMENDASI LAPTOP</h4>
 				</center>
 				<ul>
 					<li>
 						<div class="row">
 							<div class="card">
 								<div class="card-content">
-									<h5 style="margin-bottom: 16px; margin-top: -6px;">Matrik Smartphone</h5>
+									<h5 style="margin-bottom: 16px; margin-top: -6px;">Matrik Laptop</h5>
 									<table class="responsive-table">
 
 										<thead style="border-top: 1px solid #d0d0d0;">
@@ -508,7 +508,7 @@ function JarakIplus($aplus,$bob){
 		<!-- Footer Start -->
 		<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
 			<div class="container">
-				<p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
+				<p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
 			</div>
 		</div>
 		<!-- Footer End -->

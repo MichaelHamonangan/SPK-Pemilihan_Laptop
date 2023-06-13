@@ -4,101 +4,135 @@ include('connection.php');
 ?>
 
 <?php 
-	if(isset($_POST["tambah_hp"])){
-		$nama      = $_POST["nama"];
+	if(isset($_POST["tambah_laptop"])){
+		$merk      = $_POST["merk"];
+		$seri      = $_POST["seri"];
 		$harga     = $_POST["harga"];
+		$layar     = $_POST["layar"];
 		$ram       = $_POST["ram"];
-		$memori    = $_POST["memori"];
-		$processor = $_POST["processor"];
-		$kamera    = $_POST["kamera"];
+		$jenis_memori    	= $_POST["jenis_memori"];
+		$ukuran_memori    	= $_POST["ukuran_memori"];
+		$processor 			= $_POST["processor"];
 		
-		$harga_angka = $ram_angka = $memori_angka = $processor_angka = $kamera_angka = 0;
+		$harga_angka = $layar_angka = $ram_angka = $jenis_memory_angka = $ukuran_memory_angka = $processor_angka = 0;
 
-		if($harga < 1000000){
-			$harga_angka = 5;
+		if($harga > 30000000){
+			$harga_angka = 10;
 		} 
-		elseif($harga >= 1000000 && $harga <= 3000000){
+		elseif($harga <= 30000000 && $harga > 20000000){
+			$harga_angka = 9;
+		}
+		elseif($harga <= 20000000 && $harga > 15000000){
+			$harga_angka = 7;
+		}
+		elseif($harga <= 15000000 && $harga > 10000000){
+			$harga_angka = 5;
+		}
+		elseif($harga <= 10000000 && $harga > 7000000){
 			$harga_angka = 4;
 		}
-		elseif($harga > 3000000 && $harga <= 4000000){
+		elseif($harga <= 7000000 && $harga > 4000000){
 			$harga_angka = 3;
 		}
-		elseif($harga > 4000000 && $harga <= 5000000){
+		elseif($harga <= 4000000 && $harga > 2000000){
 			$harga_angka = 2;
 		}
-		elseif($harga > 5000000){
+		elseif($harga < 2000000){
 			$harga_angka = 1;
 		}
 
-
-		if($ram < 6){
-			$ram_angka = $ram;
+		if($layar < 11){
+			$harga_angka = 1;
+		} 
+		elseif($layar >= 11 && $layar <= 14){
+			$harga_angka = 3;
 		}
-		elseif($ram == 6){
+		elseif($harga > 14){
+			$harga_angka = 5;
+		}
+
+		if($ram == 4){
+			$ram_angka = 1;
+		}
+		elseif($ram == 8){
+			$ram_angka = 2;
+		}
+		elseif($ram == 16){
+			$ram_angka = 3;
+		}
+		elseif($ram == 32){
+			$ram_angka = 4;
+		}
+		elseif($ram == 64){
 			$ram_angka = 5;
 		}
 
 
-		if($memori == 4){
-			$memori_angka = 1;
+		if($jenis_memori == "SSD"){
+			$jenis_memory_angka = 1;
 		}
-		elseif($memori == 8){
-			$memori_angka = 2;
-		}
-		elseif($memori == 16){
-			$memori_angka = 3;
-		}
-		elseif($memori == 32){
-			$memori_angka = 4;
-		}
-		elseif($memori == 64){
-			$memori_angka = 5;
+		elseif($jenis_memori == "HDD"){
+			$jenis_memory_angka = 5;
 		}
 
 
-		if($processor == "Dualcore"){
+		if($ukuran_memory == 256){
+			$ukuran_memory_angka = 1;
+		}
+		elseif($ukuran_memory == 512){
+			$ukuran_memory_angka = 2;
+		}
+		elseif($ukuran_memory == 1024){
+			$ukuran_memory_angka = 3;
+		}
+		elseif($ukuran_memory == 2048){
+			$ukuran_memory_angka = 4;
+		}
+		elseif($ukuran_memory == 4096){
+			$ukuran_memory_angka = 5;
+		}
+
+		if($processor == "Performa Minimum"){
 			$processor_angka = 1;
 		}
-		elseif($processor == "Quadcore"){
+		elseif($processor == "Performa Rendah"){
+			$processor_angka = 2;
+		}
+		elseif($processor == "Performa Sedang"){
 			$processor_angka = 3;
 		}
-		elseif($processor == "Octacore"){
+		elseif($processor == "Performa Tinggi"){
+			$processor_angka = 4;
+		}
+		elseif($processor == "Performa Maximum"){
 			$processor_angka = 5;
 		}
-
-
-		if($kamera == 8){
-			$kamera_angka = 1;
-		}
-		elseif($kamera == 13){
-			$kamera_angka = 3;
-		}
-		elseif($kamera == 16){
-			$kamera_angka = 5;
-		}
-
-		$sql = "INSERT INTO `daftar_laptop` (`id_hp`, `nama_hp`, `harga_hp`, `ram_hp`, `memori_hp`, `processor_hp`, `kamera_hp`, `harga_angka`, `ram_angka`, `memori_angka`, `processor_angka`, `kamera_angka`) 
-				VALUES (NULL, :nama_hp, :harga_hp, :ram_hp, :memori_hp, :processor_hp, :kamera_hp, :harga_angka, :ram_angka, :memori_angka, :processor_angka, :kamera_angka)";
+		
+		$sql = "INSERT INTO `data_hp` (`id`, `merk`, `seri`, `harga`, `layar`, `ram`, `jenis_memory`, `ukuran_memory`, `processor`, `harga_angka`,`layar_angka`, `ram_angka`, `jenis_memory_angka`,`ukuran_memory_angka`, `processor_angka`) 
+				VALUES (NULL, :merk, :seri, :harga, :layar, :ram, :jenis_memory, :ukuran_memory, :processor, :harga_angka,:layar_angka, :ram_angka, :jenis_memory_angka,:ukuran_memory_angka, :processor_angka)";
 		$stmt = $db->prepare($sql);
-		$stmt->bindValue(':nama_hp', $nama);
-		$stmt->bindValue(':harga_hp', $harga);
-		$stmt->bindValue(':ram_hp', $ram);
-		$stmt->bindValue(':memori_hp', $memori);
-		$stmt->bindValue(':processor_hp', $processor);
-		$stmt->bindValue(':kamera_hp', $kamera);
+		$stmt->bindValue(':merk', $merk);
+		$stmt->bindValue(':seri', $seri);
+		$stmt->bindValue(':harga', $harga);
+		$stmt->bindValue(':layar', $layar);
+		$stmt->bindValue(':ram', $ram);
+		$stmt->bindValue(':jenis_memory', $jenis_memory);
+		$stmt->bindValue(':ukuran_memory', $ukuran_memory);
+		$stmt->bindValue(':processor', $processor);
 		$stmt->bindValue(':harga_angka', $harga_angka);
+		$stmt->bindValue(':layar_angka', $layar_angka);
 		$stmt->bindValue(':ram_angka', $ram_angka);
-		$stmt->bindValue(':memori_angka', $memori_angka);
+		$stmt->bindValue(':jenis_memory_angka', $jenis_memory_angka);
+		$stmt->bindValue(':ukuran_memory_angka', $ukuran_memory_angka);
 		$stmt->bindValue(':processor_angka', $processor_angka);
-		$stmt->bindValue(':kamera_angka', $kamera_angka);
 		$stmt->execute();
 	}
 
-	if(isset($_POST["hapus_hp"])){
-		$id_hapus_hp = $_POST['id_hapus_hp'];
-		$sql_delete = "DELETE FROM `daftar_laptop` WHERE `id_hp` = :id_hapus_hp";
+	if(isset($_POST["hapus_laptop"])){
+		$id_hapus_laptop = $_POST['id_hapus_laptop'];
+		$sql_delete = "DELETE FROM `daftar_laptop` WHERE `id` = :id_hapus_laptop";
 		$stmt_delete = $db->prepare($sql_delete);
-		$stmt_delete->bindValue(':id_hapus_hp', $id_hapus_hp);
+		$stmt_delete->bindValue(':id_hapus_laptop', $id_hapus_laptop);
 		$stmt_delete->execute();
 		$query_reorder_id=mysqli_query($selectdb,"ALTER TABLE daftar_laptop AUTO_INCREMENT = 1");
 	}
@@ -107,7 +141,7 @@ include('connection.php');
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Pendukung Keputusan Pemilihan Smartphone</title>
+	<title>Sistem Pendukung Keputusan Pemilihan LAPTOP</title>
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -139,7 +173,7 @@ include('connection.php');
 								<ul class="left" style="margin-left: -52px;">
 									<li><a href="index.php">HOME</a></li>
 									<li><a href="model.php">REKOMENDASI</a></li>
-									<li><a class="active" href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
+									<li><a class="active" href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
 								</ul>
 						</div>
 					
@@ -157,7 +191,7 @@ include('connection.php');
 						<div class="row">
 						<div class="card">
 								<div class="card-content">
-									<center><h4 style="margin-bottom: 0px; margin-top: -8px;">Daftar Smartphone</h4></center>
+									<center><h4 style="margin-bottom: 0px; margin-top: -8px;">Daftar Laptop</h4></center>
 									<table id="table_id" class="hover dataTablesCustom" style="width:100%">
 											<thead style="border-top: 1px solid #d0d0d0;">
 												<tr>
@@ -188,8 +222,8 @@ include('connection.php');
 													<td>
 														<center>
 															<form method="POST">
-																<input type="hidden" name="id_hapus_hp" value="<?php echo $data['id_hp'] ?>">
-																<button type="submit" name="hapus_hp" style="height: 32px; width: 32px;" class="btn-floating btn-small waves-effect waves-light red"><i style="line-height: 32px;" class="material-icons">remove</i></button>
+																<input type="hidden" name="id_hapus_laptop" value="<?php echo $data['id_hp'] ?>">
+																<button type="submit" name="hapus_laptop" style="height: 32px; width: 32px;" class="btn-floating btn-small waves-effect waves-light red"><i style="line-height: 32px;" class="material-icons">remove</i></button>
 															</form>
 														</center>
 													</td>
@@ -220,7 +254,7 @@ include('connection.php');
 						<div class="row">
 							<div class="card">
 								<div class="card-content" style="padding-top: 10px;">
-									<center><h5 style="margin-bottom: 10px;">Analisa Smartphone</h5></center>
+									<center><h5 style="margin-bottom: 10px;">Analisa Laptop</h5></center>
 									<table class="responsive-table">
 									
 											<thead style="border-top: 1px solid #d0d0d0;">
@@ -268,7 +302,7 @@ include('connection.php');
 			<div class="col s6">
 					<div class="card-content">
 						<div class="row">
-							<center><h5 style="margin-top:-8px;">Masukan Smartphone</h5></center>
+							<center><h5 style="margin-top:-8px;">Masukan Laptop</h5></center>
 							<form method="POST" action="">
 								<div class = "row">
 									<div class="col s12">
@@ -340,7 +374,7 @@ include('connection.php');
 
 									</div>  
 								</div> 
-								<center><button name="tambah_hp" type="submit" class="waves-effect waves-light btn teal" style="margin-top: 0px;">Tambah</button></center>	
+								<center><button name="tambah_laptop" type="submit" class="waves-effect waves-light btn teal" style="margin-top: 0px;">Tambah</button></center>	
 							</form>
 						</div>
 					</div>
@@ -357,7 +391,7 @@ include('connection.php');
     <!-- Footer Start -->
 	<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
       <div class="container">
-        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
+        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
       </div>
     </div>
     <!-- Footer End -->
