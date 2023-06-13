@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Leppi: Sistem Pendukung Keputusan Pemilihan Laptop</title>
-	<meta property="og:image" content="assets/image/laptop.jpg" />
+	<meta property="og:image" content="assets/image/laptop2.jpg" />
 	<meta name="description" content="Leppi adalah aplikasi Sistem Pendukung Keputusan Laptop berbasis Metode Weight Product">
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -72,9 +72,10 @@
 		    <div class="section-card" style="padding: 36px 0px">
 		    	<div class="row">
 		    		<div class="col s6">
-			    		<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">Tentang Aplikasi Ini</h5></center><br>
-			    		<p style="text-align: justify; padding-right: 16px;">Sistem Pendukung Keputusan ini dibuat untuk membantu penggunanya dengan memberikan
-						beberapa pilihan laptop yang cocok dengan kriteria masukan dari pengguna.</p>
+						<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">Tentang Aplikasi Ini</h5></center><br>
+			    		<p style="text-align: justify; padding-right: 16px;">Program ini membantu kamu untuk memilih laptop yang cocok atau serupa
+						dengan spesifikasi laptop yang kamu butuhkan. Kamu tinggal memasukkan spesifikasi laptop seperti apa yang kamu inginkan.
+						Kami akan sesuaikan dengan budget yang kamu punya!</p>
 						</div>
 			    	<div class="col s6">
 			    		<center><h5 class="header" style="margin-left: 0px; margin-bottom: 0px; margin-top: 25px; color: #635c73">Tentang Metode TOPSIS</h5></center><br>
@@ -89,14 +90,6 @@
 		</div>
 	</div>
 	<!-- Info End -->
-
-    <!-- Footer Start -->
-	<!-- <div class="footer-copyright" style="padding: 0px 0px">
-      <div class="container">
-        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
-      </div>
-    </div> -->
-    <!-- Footer End -->
 
     <script type="text/javascript">
 	 			$(document).ready(function(){
