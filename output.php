@@ -468,7 +468,7 @@ function JarakIplus($aplus,$bob){
 													<tr>
 														<th><center>Nilai Preferensi tertinggi</center></th>
 														<th></th>
-														<th><center>Alternatif HP terpilih</center></th>
+														<th><center>Alternatif terpilih</center></th>
 													</tr>
 												</thead>
 												<tbody>
