@@ -4,14 +4,15 @@ include('connection.php');
 
 //Bobot
 $W1	= $_POST['harga'];
-$W2	= $_POST['ram'];
-$W3	= $_POST['memori'];
-$W4	= $_POST['processor'];
-$W5	= $_POST['kamera'];
+$W2	= $_POST['layar'];
+$W3	= $_POST['ram'];
+$W4	= $_POST['jenis_memory'];
+$W5	= $_POST['ukuran_memory'];
+$W6	= $_POST['processor'];
 
 //Pembagi Normalisasi
 function pembagiNM($matrik){
-	for($i=0;$i<5;$i++){
+	for($i=0;$i<6;$i++){
 		$pangkatdua[$i] = 0;
 		for($j=0;$j<sizeof($matrik);$j++){
 			$pangkatdua[$i] = $pangkatdua[$i] + pow($matrik[$j][$i],2);}
@@ -57,7 +58,7 @@ function JarakIplus($aplus,$bob){
 <html>
 <head>
 	
-	<title>Sistem Pendukung Keputusan Pemilihan Smartphone</title>
+	<title>Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -87,8 +88,8 @@ function JarakIplus($aplus,$bob){
 					<ul class="left" style="margin-left: -52px;">
 						<li><a href="index.php">HOME</a></li>
 						<li><a href="model.php">REKOMENDASI</a></li>
-						<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
-						<li><a class="active" href="hasil.php">PERHITUNGAN</a></li>
+						<li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
+						<li><a class="active" href="output.php">PERHITUNGAN</a></li>
 					</ul>
 				</div>
 
@@ -105,14 +106,14 @@ function JarakIplus($aplus,$bob){
 
 
 				<center>
-					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">HASIL REKOMENDASI SMARTPHONE</h4>
+					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">HASIL REKOMENDASI LAPTOP</h4>
 				</center>
 				<ul>
 					<li>
 						<div class="row">
 							<div class="card">
 								<div class="card-content">
-									<h5 style="margin-bottom: 16px; margin-top: -6px;">Matrik Smartphone</h5>
+									<h5 style="margin-bottom: 16px; margin-top: -6px;">Matrik Laptop</h5>
 									<table class="responsive-table">
 
 										<thead style="border-top: 1px solid #d0d0d0;">
@@ -123,6 +124,7 @@ function JarakIplus($aplus,$bob){
 												<th><center>C3 (Benefit)</center></th>
 												<th><center>C4 (Benefit)</center></th>
 												<th><center>C5 (Benefit)</center></th>
+												<th><center>C6 (Benefit)</center></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -130,15 +132,16 @@ function JarakIplus($aplus,$bob){
 											$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 											$no=1;
 											while ($daftar_laptop=mysqli_fetch_array($query)) {
-												$Matrik[$no-1]=array($daftar_laptop['harga_angka'],$daftar_laptop['ram_angka'],$daftar_laptop['memori_angka'],$daftar_laptop['processor_angka'],$daftar_laptop['kamera_angka'] );
+												$Matrik[$no-1]=array($daftar_laptop['harga_angka'],$daftar_laptop['layar_angka'],$daftar_laptop['ram_angka'],$daftar_laptop['jenis_memory_angka'],$daftar_laptop['ukuran_memory_angka'],$daftar_laptop['processor_angka'] );
 												?>
 												<tr>
 													<td><center><?php echo "A",$no ?></center></td>
 													<td><center><?php echo $daftar_laptop['harga_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['layar_angka'] ?></center></td>
 													<td><center><?php echo $daftar_laptop['ram_angka'] ?></center></td>
-													<td><center><?php echo $daftar_laptop['memori_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['jenis_memory_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['ukuran_memory_angka'] ?></center></td>
 													<td><center><?php echo $daftar_laptop['processor_angka'] ?></center></td>
-													<td><center><?php echo $daftar_laptop['kamera_angka'] ?></center></td>
 												</tr>
 												<?php
 												$no++;
@@ -172,6 +175,7 @@ function JarakIplus($aplus,$bob){
 												<th><center>C3 (Benefit)</center></th>
 												<th><center>C4 (Benefit)</center></th>
 												<th><center>C5 (Benefit)</center></th>
+												<th><center>C6 (Benefit)</center></th>
 											</tr>
 										</thead>
 										<tbody>
@@ -182,19 +186,21 @@ function JarakIplus($aplus,$bob){
 											while ($daftar_laptop=mysqli_fetch_array($query)) {
 
 												$MatrikNormalisasi[$no-1]=array($daftar_laptop['harga_angka']/$pembagiNM[0],
-													$daftar_laptop['ram_angka']/$pembagiNM[1],
-													$daftar_laptop['memori_angka']/$pembagiNM[2],
-													$daftar_laptop['processor_angka']/$pembagiNM[3],
-													$daftar_laptop['kamera_angka']/$pembagiNM[4]);
+													$daftar_laptop['layar_angka']/$pembagiNM[1],
+													$daftar_laptop['ram_angka']/$pembagiNM[2],
+													$daftar_laptop['jenis_memory_angka']/$pembagiNM[3],
+													$daftar_laptop['ukuran_memory_angka']/$pembagiNM[4],
+													$daftar_laptop['processor_angka']/$pembagiNM[5]);
 
 													?>
 													<tr>
 														<td><center><?php echo "A",$no ?></center></td>
 														<td><center><?php echo round($daftar_laptop['harga_angka']/$pembagiNM[0],6)?></center></td>
-														<td><center><?php echo round($daftar_laptop['ram_angka']/$pembagiNM[1],6) ?></center></td>
-														<td><center><?php echo round($daftar_laptop['memori_angka']/$pembagiNM[2],6) ?></center></td>
-														<td><center><?php echo round($daftar_laptop['processor_angka']/$pembagiNM[3],6) ?></center></td>
-														<td><center><?php echo round($daftar_laptop['kamera_angka']/$pembagiNM[4],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['layar_angka']/$pembagiNM[1],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['ram_angka']/$pembagiNM[2],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['jenis_memory_angka']/$pembagiNM[3],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['ukuran_memory_angka']/$pembagiNM[4],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['processor_angka']/$pembagiNM[5],6) ?></center></td>
 													</tr>
 													<?php
 													$no++;
@@ -222,10 +228,11 @@ function JarakIplus($aplus,$bob){
 											<thead>
 												<tr>
 													<th><center>Value Kriteria Harga</center></th>
-													<th><center>Value Kriteria Ram</center></th>
-													<th><center>Value Kriteria Memori</center></th>
+													<th><center>Value Kriteria Layar</center></th>
+													<th><center>Value Kriteria RAM</center></th>
+													<th><center>Value Kriteria Jenis Memori</center></th>
+													<th><center>Value Kriteria Ukuran Memori</center></th>
 													<th><center>Value Kriteria Processor</center></th>
-													<th><center>Value Kriteria Kamera</center></th>
 												</tr>
 											</thead>
 											<tbody>
@@ -236,6 +243,7 @@ function JarakIplus($aplus,$bob){
 													<td><center><?php echo($W3);?></center></td>
 													<td><center><?php echo($W4);?></center></td>
 													<td><center><?php echo($W5);?></center></td>
+													<td><center><?php echo($W6);?></center></td>
 												</tr>
 											</tbody>
 										</table>
@@ -265,6 +273,7 @@ function JarakIplus($aplus,$bob){
 													<th><center>C3 (Benefit)</center></th>
 													<th><center>C4 (Benefit)</center></th>
 													<th><center>C5 (Benefit)</center></th>
+													<th><center>C6 (Benefit)</center></th>
 												</tr>
 											</thead>
 											<tbody>
@@ -279,7 +288,8 @@ function JarakIplus($aplus,$bob){
 														$MatrikNormalisasi[$no-1][1]*$W2,
 														$MatrikNormalisasi[$no-1][2]*$W3,
 														$MatrikNormalisasi[$no-1][3]*$W4,
-														$MatrikNormalisasi[$no-1][4]*$W5 );
+														$MatrikNormalisasi[$no-1][3]*$W5,
+														$MatrikNormalisasi[$no-1][4]*$W6 );
 
 														?>
 														<tr>
@@ -289,6 +299,7 @@ function JarakIplus($aplus,$bob){
 															<td><center><?php echo round($MatrikNormalisasi[$no-1][2]*$W3,6) ?></center></td>
 															<td><center><?php echo round($MatrikNormalisasi[$no-1][3]*$W4,6) ?></center></td>
 															<td><center><?php echo round($MatrikNormalisasi[$no-1][4]*$W5,6) ?></center></td>
+															<td><center><?php echo round($MatrikNormalisasi[$no-1][5]*$W6,6) ?></center></td>
 														</tr>
 														<?php
 														$no++;
@@ -324,6 +335,7 @@ function JarakIplus($aplus,$bob){
 														<th><center>Y3 (Benefit)</center></th>
 														<th><center>Y4 (Benefit)</center></th>
 														<th><center>Y5 (Benefit)</center></th>
+														<th><center>Y6 (Benefit)</center></th>
 													</tr>
 												</thead>
 												<tbody>
@@ -332,7 +344,7 @@ function JarakIplus($aplus,$bob){
 													?>
 													<tr>
 														<?php  
-														$idealpositif=array(min($NormalisasiBobotTrans[0]),max($NormalisasiBobotTrans[1]),max($NormalisasiBobotTrans[2]),max($NormalisasiBobotTrans[3]),max($NormalisasiBobotTrans[4]));
+														$idealpositif=array(min($NormalisasiBobotTrans[0]),max($NormalisasiBobotTrans[1]),max($NormalisasiBobotTrans[2]),max($NormalisasiBobotTrans[3]),max($NormalisasiBobotTrans[4]),max($NormalisasiBobotTrans[5]));
 														?>
 														<td><center><?php echo "Y+" ?> </center></td>
 														<td><center><?php echo(round(min($NormalisasiBobotTrans[0]),6));?>&nbsp(min)</center></td>
@@ -340,10 +352,11 @@ function JarakIplus($aplus,$bob){
 														<td><center><?php echo(round(max($NormalisasiBobotTrans[2]),6));?>&nbsp(max)</center></td>
 														<td><center><?php echo(round(max($NormalisasiBobotTrans[3]),6));?>&nbsp(max)</center></td>
 														<td><center><?php echo(round(max($NormalisasiBobotTrans[4]),6));?>&nbsp(max)</center></td>
+														<td><center><?php echo(round(max($NormalisasiBobotTrans[5]),6));?>&nbsp(max)</center></td>
 													</tr>
 													<tr>
 														<?php  
-														$idealnegatif=array(max($NormalisasiBobotTrans[0]),min($NormalisasiBobotTrans[1]),min($NormalisasiBobotTrans[2]),min($NormalisasiBobotTrans[3]),min($NormalisasiBobotTrans[4]));
+														$idealnegatif=array(max($NormalisasiBobotTrans[0]),min($NormalisasiBobotTrans[1]),min($NormalisasiBobotTrans[2]),min($NormalisasiBobotTrans[3]),min($NormalisasiBobotTrans[4]),min($NormalisasiBobotTrans[5]));
 														?>
 														<td><center><?php echo "Y-" ?> </center></td>
 														<td><center><?php echo(round(max($NormalisasiBobotTrans[0]),6));?>&nbsp(max)</center></td>
@@ -351,6 +364,7 @@ function JarakIplus($aplus,$bob){
 														<td><center><?php echo(round(min($NormalisasiBobotTrans[2]),6));?>&nbsp(min)</center></td>
 														<td><center><?php echo(round(min($NormalisasiBobotTrans[3]),6));?>&nbsp(min)</center></td>
 														<td><center><?php echo(round(min($NormalisasiBobotTrans[4]),6));?>&nbsp(min)</center></td>
+														<td><center><?php echo(round(min($NormalisasiBobotTrans[5]),6));?>&nbsp(min)</center></td>
 													</tr>
 												</tbody>
 											</table>
@@ -468,7 +482,7 @@ function JarakIplus($aplus,$bob){
 													<tr>
 														<th><center>Nilai Preferensi tertinggi</center></th>
 														<th></th>
-														<th><center>Alternatif HP terpilih</center></th>
+														<th><center>Alternatif terpilih</center></th>
 													</tr>
 												</thead>
 												<tbody>
@@ -477,12 +491,13 @@ function JarakIplus($aplus,$bob){
 														$testmax = max($nilaiV);
 														for ($i=0; $i < count($nilaiV); $i++) { 
 															if ($nilaiV[$i] == $testmax) {
-																$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop where id_hp = $i+1");
+																$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop where id = $i+1");
 																?>
 																<td><center><?php echo "V".($i+1); ?></center></td>
 																<td><center><?php echo $nilaiV[$i]; ?></center></td>
 																<?php while ($user=mysqli_fetch_array($query)) { ?>
-																<td><center><?php echo $user['nama_hp']; ?></center></td>
+																<td><center><?php echo $user['merk']; ?></center></td>
+																<td><center><?php echo $user['seri']; ?></center></td>
 																<?php
 															}
 														}
@@ -508,7 +523,7 @@ function JarakIplus($aplus,$bob){
 		<!-- Footer Start -->
 		<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
 			<div class="container">
-				<p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Smartphone 2018.</p>
+				<p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
 			</div>
 		</div>
 		<!-- Footer End -->

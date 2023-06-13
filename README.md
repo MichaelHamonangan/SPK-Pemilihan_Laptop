@@ -31,3 +31,5 @@
     
     ![](./ss/g.PNG)
 
+=======
+# SPK-Pemilihan_Laptop

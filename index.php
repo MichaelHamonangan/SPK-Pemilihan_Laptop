@@ -4,6 +4,7 @@
 	<title>Leppi: Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<meta property="og:image" content="assets/image/laptop2.jpg" />
 	<meta name="description" content="Leppi adalah aplikasi Sistem Pendukung Keputusan Laptop berbasis Metode Weight Product">
+  
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
