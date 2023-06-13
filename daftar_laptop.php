@@ -77,7 +77,7 @@ include('connection.php');
 			$kamera_angka = 5;
 		}
 
-		$sql = "INSERT INTO `data_hp` (`id_hp`, `nama_hp`, `harga_hp`, `ram_hp`, `memori_hp`, `processor_hp`, `kamera_hp`, `harga_angka`, `ram_angka`, `memori_angka`, `processor_angka`, `kamera_angka`) 
+		$sql = "INSERT INTO `daftar_laptop` (`id_hp`, `nama_hp`, `harga_hp`, `ram_hp`, `memori_hp`, `processor_hp`, `kamera_hp`, `harga_angka`, `ram_angka`, `memori_angka`, `processor_angka`, `kamera_angka`) 
 				VALUES (NULL, :nama_hp, :harga_hp, :ram_hp, :memori_hp, :processor_hp, :kamera_hp, :harga_angka, :ram_angka, :memori_angka, :processor_angka, :kamera_angka)";
 		$stmt = $db->prepare($sql);
 		$stmt->bindValue(':nama_hp', $nama);
@@ -96,11 +96,11 @@ include('connection.php');
 
 	if(isset($_POST["hapus_hp"])){
 		$id_hapus_hp = $_POST['id_hapus_hp'];
-		$sql_delete = "DELETE FROM `data_hp` WHERE `id_hp` = :id_hapus_hp";
+		$sql_delete = "DELETE FROM `daftar_laptop` WHERE `id_hp` = :id_hapus_hp";
 		$stmt_delete = $db->prepare($sql_delete);
 		$stmt_delete->bindValue(':id_hapus_hp', $id_hapus_hp);
 		$stmt_delete->execute();
-		$query_reorder_id=mysqli_query($selectdb,"ALTER TABLE data_hp AUTO_INCREMENT = 1");
+		$query_reorder_id=mysqli_query($selectdb,"ALTER TABLE daftar_laptop AUTO_INCREMENT = 1");
 	}
 ?>
 
@@ -140,7 +140,6 @@ include('connection.php');
 									<li><a href="index.php">HOME</a></li>
 									<li><a href="model.php">REKOMENDASI</a></li>
 									<li><a class="active" href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
-									<li><a href="#about">TENTANG</a></li>
 								</ul>
 						</div>
 					
@@ -174,7 +173,7 @@ include('connection.php');
 											</thead>
 											<tbody>
 												<?php
-												$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+												$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 												$no=1;
 												while ($data=mysqli_fetch_array($query)) {
 												?>
@@ -236,7 +235,7 @@ include('connection.php');
 											</thead>
 											<tbody>
 												<?php
-												$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+												$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 												$no=1;
 												while ($data=mysqli_fetch_array($query)) {
 												?>
@@ -350,23 +349,6 @@ include('connection.php');
 		<div style="height: 0px; "class="modal-footer">
           <a style="margin-top: -30px;" class="modal-action modal-close waves-effect waves-green btn-flat">Tutup</a>
         </div>
-	</div>
-	<!-- Modal End -->
-
-	<!-- Modal Start -->
-	<div id="about" class="modal">
-		<div class="modal-content">
-			<h4>Tentang</h4>
-			<p>Sistem Pendukung Keputusan Pemilihan Smartphone ini menggunakan metode TOPSIS yang dibangun menggunakan bahasa PHP.
-			Sistem ini dibuat sebagai Tugas Akhir Mata Kuliah Sistem Pendukung Keputusan Prodi Teknik Informatika Universitas Trunojoyo Madura. <br>
-			<br>
-			1. Zulfi Osman<br>
-			2. Wahid Arinanto Nugroho <a href="https://wahidari.gitlab.io/"> (Gitlab)</a><br>
-		</p>
-		</div>
-		<div class="modal-footer">
-			<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Tutup</a>
-		</div>
 	</div>
 	<!-- Modal End -->
 

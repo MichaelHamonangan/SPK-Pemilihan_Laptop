@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data_hp`
+-- Table structure for table `daftar_laptop`
 --
 
 CREATE TABLE `daftar_laptop` (

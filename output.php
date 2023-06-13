@@ -89,7 +89,6 @@ function JarakIplus($aplus,$bob){
 						<li><a href="model.php">REKOMENDASI</a></li>
 						<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
 						<li><a class="active" href="hasil.php">PERHITUNGAN</a></li>
-						<li><a href="#about">TENTANG</a></li>
 					</ul>
 				</div>
 
@@ -128,18 +127,18 @@ function JarakIplus($aplus,$bob){
 										</thead>
 										<tbody>
 											<?php
-											$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+											$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 											$no=1;
-											while ($data_hp=mysqli_fetch_array($query)) {
-												$Matrik[$no-1]=array($data_hp['harga_angka'],$data_hp['ram_angka'],$data_hp['memori_angka'],$data_hp['processor_angka'],$data_hp['kamera_angka'] );
+											while ($daftar_laptop=mysqli_fetch_array($query)) {
+												$Matrik[$no-1]=array($daftar_laptop['harga_angka'],$daftar_laptop['ram_angka'],$daftar_laptop['memori_angka'],$daftar_laptop['processor_angka'],$daftar_laptop['kamera_angka'] );
 												?>
 												<tr>
 													<td><center><?php echo "A",$no ?></center></td>
-													<td><center><?php echo $data_hp['harga_angka'] ?></center></td>
-													<td><center><?php echo $data_hp['ram_angka'] ?></center></td>
-													<td><center><?php echo $data_hp['memori_angka'] ?></center></td>
-													<td><center><?php echo $data_hp['processor_angka'] ?></center></td>
-													<td><center><?php echo $data_hp['kamera_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['harga_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['ram_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['memori_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['processor_angka'] ?></center></td>
+													<td><center><?php echo $daftar_laptop['kamera_angka'] ?></center></td>
 												</tr>
 												<?php
 												$no++;
@@ -177,25 +176,25 @@ function JarakIplus($aplus,$bob){
 										</thead>
 										<tbody>
 											<?php
-											$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+											$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 											$no=1;
 											$pembagiNM=pembagiNM($Matrik);
-											while ($data_hp=mysqli_fetch_array($query)) {
+											while ($daftar_laptop=mysqli_fetch_array($query)) {
 
-												$MatrikNormalisasi[$no-1]=array($data_hp['harga_angka']/$pembagiNM[0],
-													$data_hp['ram_angka']/$pembagiNM[1],
-													$data_hp['memori_angka']/$pembagiNM[2],
-													$data_hp['processor_angka']/$pembagiNM[3],
-													$data_hp['kamera_angka']/$pembagiNM[4]);
+												$MatrikNormalisasi[$no-1]=array($daftar_laptop['harga_angka']/$pembagiNM[0],
+													$daftar_laptop['ram_angka']/$pembagiNM[1],
+													$daftar_laptop['memori_angka']/$pembagiNM[2],
+													$daftar_laptop['processor_angka']/$pembagiNM[3],
+													$daftar_laptop['kamera_angka']/$pembagiNM[4]);
 
 													?>
 													<tr>
 														<td><center><?php echo "A",$no ?></center></td>
-														<td><center><?php echo round($data_hp['harga_angka']/$pembagiNM[0],6)?></center></td>
-														<td><center><?php echo round($data_hp['ram_angka']/$pembagiNM[1],6) ?></center></td>
-														<td><center><?php echo round($data_hp['memori_angka']/$pembagiNM[2],6) ?></center></td>
-														<td><center><?php echo round($data_hp['processor_angka']/$pembagiNM[3],6) ?></center></td>
-														<td><center><?php echo round($data_hp['kamera_angka']/$pembagiNM[4],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['harga_angka']/$pembagiNM[0],6)?></center></td>
+														<td><center><?php echo round($daftar_laptop['ram_angka']/$pembagiNM[1],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['memori_angka']/$pembagiNM[2],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['processor_angka']/$pembagiNM[3],6) ?></center></td>
+														<td><center><?php echo round($daftar_laptop['kamera_angka']/$pembagiNM[4],6) ?></center></td>
 													</tr>
 													<?php
 													$no++;
@@ -270,10 +269,10 @@ function JarakIplus($aplus,$bob){
 											</thead>
 											<tbody>
 												<?php
-												$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+												$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 												$no=1;
 												$pembagiNM=pembagiNM($Matrik);
-												while ($data_hp=mysqli_fetch_array($query)) {
+												while ($daftar_laptop=mysqli_fetch_array($query)) {
 													
 													$NormalisasiBobot[$no-1]=array(
 														$MatrikNormalisasi[$no-1][0]*$W1,
@@ -383,11 +382,11 @@ function JarakIplus($aplus,$bob){
 												</thead>
 												<tbody>
 													<?php
-													$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+													$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 													$no=1;
 													$Dplus=JarakIplus($idealpositif,$NormalisasiBobot);
 													$Dmin=JarakIplus($idealnegatif,$NormalisasiBobot);
-													while ($data_hp=mysqli_fetch_array($query)) {
+													while ($daftar_laptop=mysqli_fetch_array($query)) {
 
 														?>
 														<tr>
@@ -429,10 +428,10 @@ function JarakIplus($aplus,$bob){
 												</thead>
 												<tbody>
 													<?php
-													$query=mysqli_query($selectdb,"SELECT * FROM data_hp");
+													$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop");
 													$no=1;
 													$nilaiV = array();
-													while ($data_hp=mysqli_fetch_array($query)) {
+													while ($daftar_laptop=mysqli_fetch_array($query)) {
 														
 														array_push($nilaiV, $Dmin[$no-1]/($Dmin[$no-1]+$Dplus[$no-1]));
 														?>
@@ -478,7 +477,7 @@ function JarakIplus($aplus,$bob){
 														$testmax = max($nilaiV);
 														for ($i=0; $i < count($nilaiV); $i++) { 
 															if ($nilaiV[$i] == $testmax) {
-																$query=mysqli_query($selectdb,"SELECT * FROM data_hp where id_hp = $i+1");
+																$query=mysqli_query($selectdb,"SELECT * FROM daftar_laptop where id_hp = $i+1");
 																?>
 																<td><center><?php echo "V".($i+1); ?></center></td>
 																<td><center><?php echo $nilaiV[$i]; ?></center></td>
@@ -503,22 +502,6 @@ function JarakIplus($aplus,$bob){
 			</div>
 		</div>
 		<!-- Daftar Laptop End -->
-		<!-- Modal Start -->
-		<div id="about" class="modal">
-			<div class="modal-content">
-				<h4>Tentang</h4>
-				<p>Sistem Pendukung Keputusan Pemilihan Smartphone ini menggunakan metode TOPSIS yang dibangun menggunakan bahasa PHP.
-					Sistem ini dibuat sebagai Tugas Akhir Mata Kuliah Sistem Pendukung Keputusan Prodi Teknik Informatika Universitas Trunojoyo Madura. <br>
-					<br>
-					1. Zulfi Osman<br>
-					2. Wahid Arinanto Nugroho <a href="https://wahidari.gitlab.io/"> (Gitlab)</a><br>
-				</p>
-			</div>
-			<div class="modal-footer">
-				<a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Tutup</a>
-			</div>
-		</div>
-		<!-- Modal End -->
 
 		<!-- Body End -->
 

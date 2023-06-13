@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Pendukung Keputusan Pemilihan Smartphone</title>
+	<title>Sistem Pendukung Keputusan Pemilihan Laptop</title>
 	<meta property="og:image" content="assets/image/laptop.jpg" />
 	<meta name="description" content="Leppi adalah aplikasi Sistem Pendukung Keputusan Laptop berbasis Metode Weight Product">
 	<!--Import Google Icon Font-->
@@ -39,7 +39,6 @@
 									<li><a class="active" href="index.php">HOME</a></li>
 									<li><a href="model.php">REKOMENDASI</a></li>
 									<li><a href="daftar_laptop.php">DAFTAR SMARTPHONE</a></li>
-									<li><a href="#about">TENTANG</a></li>
 								</ul>
 						</div>
 					
@@ -84,23 +83,6 @@
 		</div>
 	</div>
 	<!-- Info End -->
-
-	<div id="about" class="modal">
-    <div class="modal-content">
-      <h4>Tentang</h4>
-      <p>Sistem Pendukung Keputusan Pemilihan Smartphone ini menggunakan metode TOPSIS yang dibangun menggunakan bahasa PHP.
-				Sistem ini dibuat sebagai Tugas Akhir Mata Kuliah Sistem Pendukung Keputusan Prodi Teknik Informatika Universitas Trunojoyo Madura. <br>
-				<br>
-				1. Zulfi Osman<br>
-				2. Wahid Arinanto Nugroho <a href="https://wahidari.gitlab.io/"> (Gitlab)</a><br>
-			</p>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Tutup</a>
-    </div>
-	</div>
-	
-    <!-- Body End -->
 
     <!-- Footer Start -->
 	<div class="footer-copyright" style="padding: 0px 0px">
