@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Sistem Pendukung Keputusan Pemilihan Laptop</title>
+<title>LaptopSage: Sistem Pendukung Keputusan Pemilihan Laptop</title>
+	<meta property="og:image" content="assets/image/laptop2.jpg" />
+	
 	<!--Import Google Icon Font-->
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	<!--Import materialize.css-->
@@ -9,7 +11,7 @@
 	<link rel="stylesheet" href="assets/css/table.css">
 	<link rel="stylesheet" href="assets/css/style.css">
 
-	<link rel="apple-touch-icon" sizes="76x76" href="assets/image/apple-icon.png"> 	<link rel="icon" type="image/png" sizes="96x96" href="assets/image/favicon.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/image/apple-icon.png">
 
 	<!--Let browser know website is optimized for mobile-->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -21,39 +23,40 @@
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-<body>
-	<div class="navbar-fixed">
-	<nav>
-    	<div class="container">
-					
-						<div class="nav-wrapper">
 
-								<ul class="left" style="margin-left: -52px;">
-									<li><a href="index.php">HOME</a></li>
-									<li><a class="active" href="model.php">REKOMENDASI</a></li>
-                                    <li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
-								</ul>
-						</div>
-					
+<body style="background-color:#161616; padding-bottom: 20px;">
+    <!-- Header Start-->
+	<div class="navbar-fixed" style="background-color:#161616">
+	<nav style="background-color:#161616">
+    	<div class="container" >	
+            <div class="nav-wrapper" style="background-color:#161616">
+                    <ul class="left" style="color:#F7F7F7; margin-left: -52px;">
+                        <li><a style="color:#F7F7F7" href="index.php">HOME</a></li>
+                        <li><a style="color:#F7F7F7" class="active" href="model.php">REKOMENDASI</a></li>
+                        <li><a style="color:#F7F7F7" href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
+                    </ul>
+            </div>
         </div>
 		</nav>
 		</div>
+        <!-- Header End -->
+
 		<!-- Body Start -->
 
 		<!-- Daftar Laptop Start -->
-        <div style="background-color: #efefef">
-            <div class="container">
-                <div class="section-card" style="padding: 32px 0px 20px 0px">
+        <div style="background-color:#F05335; border-radius: 10px">
+            <div class="container" >
+                <div class="section-card" style="padding: 25px 0px 20px 0px">
                     <ul>
                         <li>
                             <div class="row">
                                 <div class="col s3">
                                 </div>
                                 <div class="col s6">      
-                                    <div class="card">
+                                    <div class="card" style="border-radius: 20px;">
                                         <div class="card-content">
                                             <div class="row">
-                                                <center><h4>Masukkan Kriteria Laptop</h4></center>
+                                                <center><h4 style="font-weight: 700">Masukkan Kriteria Laptop</h4></center>
                                                 <br>
                                                 <form class = "col s12" method="POST" action="output.php">
                                                     <div class = "row">
@@ -143,7 +146,8 @@
                                                             </div>
                                                             
                                                         </div>  
-                                                    <center><button type="submit" class="waves-effect waves-light btn" style="margin-bottom:-46px;">Hitung</button></center>	
+                                                    <center><button type="submit" class="waves-effect waves-light btn"
+                                                    style="border-radius: 100px; background-color:#F05335; color:#F7F7F7; margin-top: 40px; font-weight: 700;">Hitung</button></center>	
                                                 </form>       
                                             </div>
                                         </div>
@@ -161,13 +165,6 @@
 
     <!-- Body End -->
 
-    <!-- Footer Start -->
-	<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
-      <div class="container">
-        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
-      </div>
-    </div>
-    <!-- Footer End -->
     <script type="text/javascript">
 	  $(document).ready(function(){
 	      $('.parallax').parallax();
