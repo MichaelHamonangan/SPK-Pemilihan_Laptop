@@ -29,7 +29,7 @@
 	<div class="navbar-fixed" style="background-color:#161616">
 	<nav style="background-color:#161616">
     	<div class="container" >	
-            <div class="nav-wrapper" style="background-color:#161616">
+            <div class="nav-wrapper" style="background-color:#161616;font-weight:bold;">
                     <ul class="left" style="color:#F7F7F7; margin-left: -52px;">
                         <li><a style="color:#F7F7F7" href="index.php">HOME</a></li>
                         <li><a style="color:#F7F7F7" class="active" href="model.php">REKOMENDASI</a></li>

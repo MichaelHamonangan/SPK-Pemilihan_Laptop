@@ -49,12 +49,12 @@
 
     <!-- Body Start -->
 		<!-- Jumbotron Start -->
-		<div id="index-banner">
+		<div id="index-banner" style="padding-bottom:200px">
 			<div class="section no-pad-bot">
 				<div class="container">
-					<h1 class="header jarak center white-text" style="font-size: 40px">Sistem Pendukung Keputusan: Pemilihan Laptop</h1>
+					<h1 class="header jarak center white-text" style="font-size: 40px">LaptopSage</h1>
 					<div class="row center">
-						<h5 class="header jarak-button col s12 light" style="color:#f7f7f7; margin-bottom: 0px; font-size: 26px">Metode Topsis</h5>
+						<h5 class="header jarak-button col s12 light" style="color:#f7f7f7; margin-bottom: 0px; font-size: 26px">Sistem Pendukung Keputusan untuk Pemilihan Laptop</h5>
 						</div>
 					<div class="row center" \>
 						<a href="model.php" id="download-button" class="btn-large"
@@ -74,16 +74,11 @@
 		    	<div class="row">
 		    		<div class="col s6">
 			    		<center><h5 class="header" style="font-weight: 700; margin-top: 25px; color: #F05335">Tentang Aplikasi Ini</h5></center><br>
-			    		<p style="text-align: justify; padding-right: 16px;  color: #161616">Program ini membantu kamu untuk memilih laptop yang cocok atau serupa
-						dengan spesifikasi laptop yang kamu butuhkan. Kamu tinggal memasukkan spesifikasi laptop seperti apa yang kamu inginkan.
-						Kami akan sesuaikan dengan budget yang kamu punya!</p>
+			    		<p style="text-align: justify; padding-right: 16px;  color: #161616">Program ini membantu kamu untuk memilih laptop yang cocok atau serupa dengan spesifikasi laptop yang kamu butuhkan. Kamu tinggal memasukkan spesifikasi laptop seperti apa yang kamu inginkan. Kami akan sesuaikan dengan budget yang kamu punya!</p>
 						</div>
 			    	<div class="col s6">
 			    		<center><h5 class="header" style="font-weight: 700; margin-top: 25px; color: #F05335">Tentang Metode TOPSIS</h5></center><br>
-							<p style="text-align: justify; padding-left: 16px; color: #161616"> TOPSIS (Technique for Order Preference by Similarity to Ideal Solution) adalah
-							metode pengambilan keputusan multi-kriteria yang digunakan untuk memilih alternatif terbaik dari sejumlah opsi yang tersedia.
-							Metode ini menggabungkan konsep perbandingan terhadap solusi ideal dan solusi yang paling buruk untuk mengevaluasi alternatif
-							berdasarkan kriteria yang telah ditentukan sebelumnya.
+							<p style="text-align: justify; padding-left: 16px; color: #161616"> Metode Topsis adalah metode dalam Sistem Pendukung Keputusan (SPK) yang digunakan untuk memilih alternatif terbaik dalam suatu masalah multi-kriteria. Parameter yang mempengaruhi metode ini meliputi kriteria, matriks keputusan, bobot kriteria, serta solusi ideal positif dan negatif. Dengan mempertimbangkan parameter-parameter tersebut, metode Topsis memberikan pemeringkatan alternatif berdasarkan kesamaan dengan solusi ideal positif dan perbedaan dengan solusi ideal negatif, untuk membantu pengambilan keputusan yang lebih terinformasi.
 							</p>
 							</div>
 		    	</div>

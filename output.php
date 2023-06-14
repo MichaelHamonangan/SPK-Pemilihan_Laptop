@@ -78,40 +78,38 @@ function JarakIplus($aplus,$bob){
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
-
-<body>
-	<div class="navbar-fixed">
-		<nav>
-			<div class="container">
-
-				<div class="nav-wrapper">
-					<ul class="left" style="margin-left: -52px;">
-						<li><a href="index.php">HOME</a></li>
-						<li><a href="model.php">REKOMENDASI</a></li>
-						<li><a href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
-						<li><a class="active" href="output.php">PERHITUNGAN</a></li>
-					</ul>
-				</div>
-
-			</div>
+<body style="background-color:#161616; padding-bottom: 20px;">
+    <!-- Header Start-->
+	<div class="navbar-fixed" style="background-color:#161616">
+	<nav style="background-color:#161616">
+    	<div class="container" >	
+            <div class="nav-wrapper" style="background-color:#161616;font-weight:bold;">
+                    <ul class="left" style="color:#F7F7F7; margin-left: -52px;">
+                        <li><a style="color:#F7F7F7" href="index.php">HOME</a></li>
+                        <li><a style="color:#F7F7F7" href="model.php">REKOMENDASI</a></li>
+                        <li><a style="color:#F7F7F7" href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
+						<li><a style="color:#F7F7F7" class="active" href="output.php">PERHITUNGAN</a></li>
+                    </ul>
+            </div>
+        </div>
 		</nav>
-	</div>
+		</div>
 	<!-- Body Start -->
 
 	<!-- Daftar Laptop Start -->
-	<div style="background-color: #efefef">
+	<div style="background-color:#F05335; border-radius: 10px">
 		<div class="container">
-			<div class="section-card" style="padding: 20px 0px">
+			<div class="section-card" style="padding: 25px 0px 20px 0px;">
 				<!--   Icon Section   -->
 
 
 				<center>
-					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">HASIL REKOMENDASI LAPTOP</h4>
+					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">HASIL REKOMENDASI LAPTOP</h4>
 				</center>
 				<ul>
 					<li>
 						<div class="row">
-							<div class="card">
+							<div class="card" style="border-radius: 20px;">
 								<div class="card-content">
 									<h5 style="margin-bottom: 16px; margin-top: -6px;">Matrik Laptop</h5>
 									<table class="responsive-table">
@@ -157,12 +155,12 @@ function JarakIplus($aplus,$bob){
 
 
 				<center>
-					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">Matriks ternormalisasi, R:</h4>
+					<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">Matriks ternormalisasi, R:</h4>
 				</center>
 				<ul>
 					<li>
 						<div class="row">
-							<div class="card">
+							<div class="card" style="border-radius: 20px;">
 								<div class="card-content">
 									<h5 style="margin-bottom: 16px; margin-top: -6px;">Matriks Normalisasi "R"</h5>
 									<table class="responsive-table">
@@ -216,12 +214,12 @@ function JarakIplus($aplus,$bob){
 
 
 					<center>
-						<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">BOBOT (W)</h4>
+						<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">BOBOT (W)</h4>
 					</center>
 					<ul> 
 						<li>
 							<div class="row">
-								<div class="card">
+								<div class="card" style="border-radius: 20px;">
 									<div class="card-content">
 									<h5 style="margin-bottom: 16px; margin-top: -6px;">BOBOT (W)</h5>
 										<table class="responsive-table">
@@ -255,12 +253,12 @@ function JarakIplus($aplus,$bob){
 
 
 					<center>
-						<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">Matriks ternormalisasi terbobot, Y:</h4>
+						<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">Matriks ternormalisasi terbobot, Y:</h4>
 					</center>
 					<ul>
 						<li>
 							<div class="row">
-								<div class="card">
+								<div class="card" style="border-radius: 20px;">
 									<div class="card-content">
 										<h5 style="margin-bottom: 16px; margin-top: -6px;">Matriks Normalisasi terBobot "Y"</h5>
 										<table class="responsive-table">
@@ -315,13 +313,13 @@ function JarakIplus($aplus,$bob){
 
 
 						<center>
-							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">Matrik Solusi ideal positif dan negatif
+							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">Matrik Solusi ideal positif dan negatif
 							</h4>
 						</center>
 						<ul>
 							<li>
 								<div class="row">
-									<div class="card">
+									<div class="card" style="border-radius: 20px;">
 										<div class="card-content">
 											<h5 style="margin-bottom: 16px; margin-top: -6px;">Matrik Solusi ideal positif "A+" dan negatif "A-"
 											</h5>
@@ -376,13 +374,13 @@ function JarakIplus($aplus,$bob){
 
 
 						<center>
-							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">Jarak antara nilai terbobot setiap alternatif terhadap solusi ideal positif												
+							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">Jarak antara nilai terbobot setiap alternatif terhadap solusi ideal positif												
 							</h4>
 						</center>
 						<ul>
 							<li>
 								<div class="row">
-									<div class="card" style="margin-left: 320px;margin-right: 320px;">
+									<div class="card" style="margin-left: 320px;margin-right: 320px;border-radius: 20px;">
 										<div class="card-content">
 											<table class="responsive-table" >
 
@@ -424,13 +422,13 @@ function JarakIplus($aplus,$bob){
 
 
 						<center>
-							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">Nilai Preferensi untuk Setiap alternatif (V)												
+							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">Nilai Preferensi untuk Setiap alternatif (V)												
 							</h4>
 						</center>
 						<ul>
 							<li>
 								<div class="row">
-									<div class="card" style="margin-left: 320px;margin-right: 320px;">
+									<div class="card" style="margin-left: 320px;margin-right: 320px;border-radius: 20px;">
 										<div class="card-content">
 											<table class="responsive-table" >
 
@@ -468,13 +466,13 @@ function JarakIplus($aplus,$bob){
 
 
 						<center>
-							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #635c73;">Nilai Preferensi tertinggi
+							<h4 class="header" style="margin-left: 24px; margin-bottom: 0px; margin-top: 24px; color: #FFFFFF;">Nilai Preferensi tertinggi
 							</h4>
 						</center>
 						<ul>
 							<li>
 								<div class="row">
-									<div class="card" style="margin-left: 300px;margin-right: 300px;">
+									<div class="card" style="margin-left: 300px;margin-right: 300px; border-radius: 20px;">
 										<div class="card-content">
 											<table class="responsive-table" >
 
@@ -509,9 +507,9 @@ function JarakIplus($aplus,$bob){
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ul>					
 					<div class="row center" \>
-						<a href="model.php" id="download-button" class="waves-effect waves-light btn" style="margin-top: 0px">Hitung Rekomendasi Ulang</a>
+						<a href="model.php" id="download-button" class="waves-effect waves-light btn" style="margin-top: 0px;">Hitung Rekomendasi Ulang</a>
 					</div>
 				</div>
 			</div>
@@ -519,14 +517,6 @@ function JarakIplus($aplus,$bob){
 		<!-- Daftar Laptop End -->
 
 		<!-- Body End -->
-
-		<!-- Footer Start -->
-		<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
-			<div class="container">
-				<p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
-			</div>
-		</div>
-		<!-- Footer End -->
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('.parallax').parallax();

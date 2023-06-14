@@ -42,16 +42,16 @@ CREATE TABLE `daftar_laptop` (
 --
 
 INSERT INTO `daftar_laptop` (`id`, `merk`, `seri`, `harga`, `layar`, `ram`, `jenis_memory`, `ukuran_memory`, `processor`, `harga_angka`,`layar_angka`, `ram_angka`, `jenis_memory_angka`,`ukuran_memory_angka`, `processor_angka`) VALUES
-                            (1, 'ASUS','Zenbook 14','18499000', '14.5', '16', 'SSD', '512', 'Performa Tinggi', '8', '5', '3', '5', '3', '4'),
-                            (2, 'Apple','Macbook Pro','28000000', '14', '16', 'SSD', '512', 'Performa Maximal', '9', '5', '3', '5', '3', '5'),
-                            (3, 'HP','Omen 16','25000000', '16', '32', 'SSD', '1024', 'Performa Maximal', '9', '8', '4', '5', '4', '5'),
-                            (4, 'Asus','ROG Strix SCAR 15','26000000', '16', '32', 'SSD', '1024', 'Performa Maximal', '9', '9', '4', '5', '3', '5'),
-                            (5, 'Acer','Aspire 13','6000000', '16', '8', 'SSD', '512', 'Performa Cukup', '6', '6', '4', '5', '3', '3'),
-                            (6, 'Asus','Vivobook Core i3','5700000', '14', '8', 'SSD', '256', 'Performa Cukup', '6', '5', '4', '5', '2', '3'),
-                            (7, 'MSI','Modern 14','9500000', '14', '8', 'SSD', '256', 'Performa Tinggi', '7', '6', '4', '5', '2', '4'),
-                            (8, 'Asus','Vivobook 15','6000000', '16', '4', 'HDD', '104', 'Performa Rendah', '6', '3', '2', '5', '4', '1'),
-                            (9, 'Lenovo','Ideapad 3','8000000', '16', '8', 'SSD', '512', 'Performa Tinggi', '7', '7', '3', '3', '3', '4'),
-                            (10, 'Dell','Vostro','9600000', '14', '8', 'SSD', '512', 'Performa Tinggi', '8', '7', '3', '5', '3', '4');
+                            (1, 'ASUS','Zenbook 14','18499000', '14.5', '16', 'SSD', '512', 'Performa Tinggi', '8', '3', '3', '1', '2', '4'),
+                            (2, 'Apple','Macbook Pro','28000000', '14', '16', 'SSD', '512', 'Performa Maximal', '9', '3', '3', '1', '2', '5'),
+                            (3, 'HP','Omen 16','25000000', '16', '32', 'SSD', '1024', 'Performa Maximal', '9', '5', '4', '1', '3', '5'),
+                            (4, 'Asus','ROG Strix SCAR 15','26000000', '16', '32', 'SSD', '1024', 'Performa Maximal', '9', '5', '3', '1', '3', '5'),
+                            (5, 'Acer','Aspire 13','6000000', '16', '8', 'SSD', '512', 'Performa Cukup', '3', '5', '2', '1', '2', '3'),
+                            (6, 'Asus','Vivobook Core i3','3000000', '11', '8', 'SSD', '256', 'Performa Minimum', '2', '1', '2', '1', '1', '1'),
+                            (7, 'MSI','Modern 14','9500000', '14', '8', 'SSD', '256', 'Performa Cukup', '4', '3', '4', '2', '1', '3'),
+                            (8, 'Asus','Vivobook 15','6000000', '16', '4', 'HDD', '256', 'Performa Rendah', '3', '5', '1', '5', '1', '2'),
+                            (9, 'Lenovo','Ideapad 3','8000000', '16', '8', 'SSD', '512', 'Performa Cukup', '4', '5', '2', '1', '2', '3'),
+                            (10, 'Dell','Vostro','9600000', '14', '8', 'SSD', '512', 'Performa Cukup', '4', '3', '2', '1', '2', '3');
 --
 -- Indexes for dumped tables
 --

@@ -164,34 +164,33 @@ include('connection.php');
 	<script type="text/javascript" charset="utf8" src="assets/dataTable/jquery.dataTables.min.js"></script>
 
 </head>
-<body>
-	<div class="navbar-fixed">
-	<nav>
-    	<div class="container">
-					
-						<div class="nav-wrapper">
-								<ul class="left" style="margin-left: -52px;">
-									<li><a href="index.php">HOME</a></li>
-									<li><a href="model.php">REKOMENDASI</a></li>
-									<li><a class="active" href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
-								</ul>
-						</div>
-					
+<body style="background-color:#161616; padding-bottom: 20px;">
+    <!-- Header Start-->
+	<div class="navbar-fixed" style="background-color:#161616">
+	<nav style="background-color:#161616">
+    	<div class="container" >	
+            <div class="nav-wrapper" style="background-color:#161616;font-weight:bold;">
+                    <ul class="left" style="color:#F7F7F7; margin-left: -52px;">
+                        <li><a style="color:#F7F7F7" href="index.php">HOME</a></li>
+                        <li><a style="color:#F7F7F7" href="model.php">REKOMENDASI</a></li>
+                        <li><a style="color:#F7F7F7" class="active" href="daftar_laptop.php">DAFTAR LAPTOP</a></li>
+                    </ul>
+            </div>
         </div>
 		</nav>
 		</div>
 		<!-- Body Start -->
 
 		<!-- Daftar Start -->
-	<div style="background-color: #efefef">
+	<div style="background-color:#F05335; border-radius: 10px">
 		<div class="container">
-		    <div class="section-card" style="padding: 40px 0px 20px 0px;">
+		    <div class="section-card" style="padding: 25px 0px 20px 0px;">
 				<ul>
 				    <li>
 						<div class="row">
-						<div class="card">
+						<div class="card" style="border-radius: 20px;">
 								<div class="card-content">
-									<center><h4 style="margin-bottom: 0px; margin-top: -8px;">Daftar Laptop</h4></center>
+									<center><h4 style="margin-bottom: 0px; margin-top: -8px;font-weight:bold;">Daftar Laptop</h4></center>
 									<table id="table_id" class="hover dataTablesCustom" style="width:100%">
 											<thead style="border-top: 1px solid #d0d0d0;">
 												<tr>
@@ -250,15 +249,15 @@ include('connection.php');
 	<!-- Daftar End -->
 
 	<!-- Daftar Start -->
-	<div style="background-color: #efefef">
+	<div style="background-color:#F05335; border-radius: 10px">
 		<div class="container">
-		    <div class="section-card" style="padding: 1px 20% 24px 20%;">
+		    <div class="section-card" style="padding: 25px 0px 20px 0px">
 				<ul>
 				    <li>
 						<div class="row">
-							<div class="card">
+							<div class="card" style="border-radius: 20px;">
 								<div class="card-content" style="padding-top: 10px;">
-									<center><h5 style="margin-bottom: 10px;">Analisis Laptop</h5></center>
+									<center><h5 style="margin-bottom: 10px;font-weight:bold;">Analisis Laptop</h5></center>
 									<table class="responsive-table">
 									
 											<thead style="border-top: 1px solid #d0d0d0;">
@@ -303,12 +302,12 @@ include('connection.php');
 	<!-- Daftar  End -->
 
 	<!-- Modal Start -->
-	<div id="tambah" class="modal" style="width: 40%; height: 100%;">
-		<div class="modal-content">
+	<div id="tambah" class="modal" style="width: 40%; height: 100%; border-radius: 10px;">
+		<div class="modal-content" >
 			<div class="col s6">
 					<div class="card-content">
 						<div class="row">
-							<center><h5 style="margin-top:-8px;">Masukan Data Laptop Baru</h5></center>
+							<center><h5 style="margin-top:10px;font-weight:bold;">Masukkan Data Laptop Baru</h5></center>
 							<form method="POST" action="">
 								<div class = "row">
 									<div class="col s12">
@@ -392,27 +391,19 @@ include('connection.php');
 
 									</div>  
 								</div> 
-								<center><button name="tambah_laptop" type="submit" class="waves-effect waves-light btn teal" style="margin-top: 0px;">Tambah</button></center>	
+								<center><button name="tambah_laptop" type="submit" class="waves-effect waves-light btn teal" style="margin-top: 0px;font-weight:bold;">Tambah</button></center>	
 							</form>
 						</div>
 					</div>
 				</div>
 			</div>
 		<div style="height: 0px; "class="modal-footer">
-          <a style="margin-top: -30px;" class="modal-action modal-close waves-effect waves-green btn-flat">Tutup</a>
+          <a style="margin-top: -10px; font-weight:bold;" class="modal-action modal-close waves-effect waves-green btn-flat">Tutup</a>
         </div>
 	</div>
 	<!-- Modal End -->
 
     <!-- Body End -->
-
-    <!-- Footer Start -->
-	<div class="footer-copyright" style="padding: 0px 0px; background-color: white">
-      <div class="container">
-        <p align="center" style="color: #999">&copy; Sistem Pendukung Keputusan Pemilihan Laptop</p>
-      </div>
-    </div>
-    <!-- Footer End -->
     <script type="text/javascript">
 	  	$(document).ready(function(){
 		$('.parallax').parallax();
